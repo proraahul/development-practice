@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #2196F3;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        font-size: 24px;
+    }
+
+    .rotate {
+        transform: rotateY(45deg);
+    }
+
+    .translate {
+        transform: translateX(50px) translateY(50px) translateZ(50px);
+    }
+
+    .scale {
+        transform: scaleX(2) scaleY(2) scaleZ(2);
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: #2196F3;
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        font-size: 24px;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+    }
+
+    .rotate-x {
+        transform: rotateX(45deg);
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: #2196F3;
+        color: #fff;
+        text-align: center;
+        line-height: 200px;
+        font-size: 24px;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+    }
+
+    .translate {
+        transform: translateX(100px) translateY(100px) translateZ(50px);
+    }
+</style>
+
+<body>
+    <!-- <div class="box rotate">Rotate</div> -->
+
+    <!-- <div class="box translate">Translate</div> -->
+
+    <!-- <div class="box scale">Scale</div> -->
+
+    <div class="box rotate-x">
+        This box is rotated on the X-axis.
+    </div>
+
+    <div class="box translate">
+        This box is translated in 3D space.
+    </div>
+</body>
+
+</html>

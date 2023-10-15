@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    audio {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        color: white;
+    }
+
+    .button {
+        padding: 10px 20px;
+        background-color: #3F51B5;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #283593;
+    }
+
+    .sound {
+        display: none;
+    }
+
+    .button:active+.sound {
+        display: block;
+    }
+</style>
+
+<body>
+    <audio src="background-music.mp3" autoplay loop></audio>
+
+    <button class="button">Click me</button>
+    <audio src="click-sound.mp3" class="sound"></audio>
+</body>
+
+</html>

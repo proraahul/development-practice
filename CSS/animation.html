@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fade-in 4s forwards;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* rotate */
+    .rotate {
+      animation: rotate 5s infinite;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Slide */
+    .slide-in {
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slide-in 1s 1s forwards;
+    }
+
+    @keyframes slide-in {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+
+    .animate-button {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+      animation-direction: alternate;
+    }
+
+    @keyframes example {
+      0% {
+        background-color: #4caf50;
+      }
+
+      50% {
+        background-color: #008cba;
+      }
+
+      100% {
+        background-color: #4caf50;
+      }
+    }
+
+    /* Tooltip */
+
+    /* .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      right: 125%;
+      margin-top: -15px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltiptext-right {
+      right: auto;
+      left: 125%;
+      margin-left: -60px;
+    } */
+
+    /*Image tooltip */
+
+    /* .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 500px;
+      height: 500px;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -250px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    } */
+
+    /*  Form Field Tooltip*/
+    /* .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: #ff0000;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    input:invalid+.tooltip .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    } */
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid black;
+    }
+
+    .arrow-up-hover {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid black;
+      transition: border-bottom-color 0.3s ease;
+    }
+
+    .arrow-up-hover:hover {
+      border-bottom-color: red;
+    }
+
+    .tooltip {
+position: relative;
+display: inline-block;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+position: absolute;
+bottom: 100%;
+left: 50%;
+transform: translateX(-50%);
+background-color: #555;
+color: #fff;
+padding: 5px;
+border-radius: 6px;
+white-space: nowrap;
+}
+
+.tooltip .tooltiptext:before {
+content: "";
+position: absolute;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+border-width: 10px;
+border-style: solid;
+border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+  </style>
+</head>
+
+<body>
+  <div class="fade-in">
+    <p>My element fades in</p>
+  </div>
+
+  <div class="rotate">
+    <p>My element rotates</p>
+  </div>
+
+  <div class="slide-in">
+    <p>My element slides in</p>
+  </div>
+
+  <button class="animate-button">Click me</button>
+
+  <!-- <span class="tooltip">Hover over me
+    <span class="tooltiptext tooltiptext-right">This is a right-aligned tooltip</span>
+  </span> -->
+
+  <br> <br>
+
+  <!-- Image tooltip -->
+  <!-- <img src="https://miro.medium.com/max/600/1*OFsc0SD55jhi8cjo7aCA4w.jpeg" class="tooltip" alt="thumbnail">
+  <span class="tooltiptext">
+    <img src="https://www.w3docs.com/uploads/media/default/0001/05/6d07a36ebe6d55273b39440f2391f1d7e6d4092a.png"
+      alt="full-size-image">
+  </span>
+  </img> -->
+
+  <!-- Form field tooltip -->
+<!-- 
+  <label for="email">Email:</label>
+  <input type="email" id="email" class="tooltip">
+  <span class="tooltiptext">Please enter a valid email address</span>
+  </input> -->
+
+  <div class="arrow-down"></div>
+  <div class="arrow-up-hover"></div>
+
+  <div class="tooltip">
+    Hover over me
+    <span class="tooltiptext">This is a tooltip</span>
+    </div>
+</body>
+
+</html>
